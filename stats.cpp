@@ -6,7 +6,9 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& data ) {
     Stats TempstructObj;
     TempstructObj.min = TempstructObj.max = sum = data[0];     
 
-    for (auto i : data) {
+   // for (auto i : data) {
+    for (int i = 0; i < data.size(); i++)
+    {
         if (data[i] < TempstructObj.min)
             TempstructObj.min = data[i];
         if (data[i] > TempstructObj.max)
